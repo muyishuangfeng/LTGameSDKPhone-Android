@@ -20,9 +20,9 @@ import com.sdk.ltgame.ltphone.uikit.PhoneActionActivity;
 public class PhonePlatform extends AbsPlatform {
 
 
-    private PhonePlatform(Context context, String appId, String appKey, boolean baseUrl,
+    private PhonePlatform(Context context, String appId, String appKey, boolean isServerTest,
                           String phone, String password, String loginCode, int target) {
-        super(context, appId, appKey, baseUrl, phone, password, loginCode, target);
+        super(context, appId, appKey, isServerTest, phone, password, loginCode, target);
     }
 
 
