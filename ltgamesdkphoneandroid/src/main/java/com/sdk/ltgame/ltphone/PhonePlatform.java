@@ -20,7 +20,7 @@ import com.sdk.ltgame.ltphone.uikit.PhoneActionActivity;
 public class PhonePlatform extends AbsPlatform {
 
 
-    private PhonePlatform(Context context, String appId, String appKey, String baseUrl,
+    private PhonePlatform(Context context, String appId, String appKey, boolean baseUrl,
                           String phone, String password, String loginCode, int target) {
         super(context, appId, appKey, baseUrl, phone, password, loginCode, target);
     }
@@ -48,10 +48,10 @@ public class PhonePlatform extends AbsPlatform {
         public IPlatform create(Context context, int target) {
             IPlatform platform = null;
             LTGameOptions options = LTGameSdk.options();
-            if (!LTGameUtil.isAnyEmpty(options.getLtAppKey(), options.getLtAppId(), options.getBaseUrl(),
+            if (!LTGameUtil.isAnyEmpty(options.getLtAppKey(), options.getLtAppId(),
                     options.getAdID(), options.getmPhone(), options.getmPassword(), options.getmLoginCode())) {
                 platform = new PhonePlatform(context, options.getLtAppId(), options.getLtAppKey(),
-                        options.getBaseUrl(), options.getmPhone(), options.getmPassword(), options.getmLoginCode(), target);
+                        options.getISServerTest(), options.getmPhone(), options.getmPassword(), options.getmLoginCode(), target);
             }
             return platform;
         }

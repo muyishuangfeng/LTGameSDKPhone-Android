@@ -2,7 +2,6 @@ package com.sdk.ltgame.ltphone;
 
 import android.app.Activity;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.gentop.ltgame.ltgamesdkcore.common.Target;
 import com.gentop.ltgame.ltgamesdkcore.impl.OnLoginStateListener;
